@@ -1,1 +1,2 @@
-# virtual-hsc-rules
+# Rules
+RoboCup Soccer Humanoid League Laws of the Game
