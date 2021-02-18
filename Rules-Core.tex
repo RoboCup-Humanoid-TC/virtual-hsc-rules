@@ -1,4 +1,21 @@
+% Preliminary notes:
+% To be compiled this document require the definition of multiple macros
+% - \greyed :: Defines how to treat text from part which were part of the FIFA
+%              rules but have been suspended for the RoboCup Rulebook
+% - \simplify :: Roughly similar to '\greyed' difference is not explicit
+% - \removed :: How to display text which has been removed since last edition,
+%               this command should not be used on 'items' from list or for
+%               entire sections of the document, but only inside paragraphs.
+%               It can affects how text is displayed (e.g. strikethrough).
+% - \removedSection :: Signals portions of the text which need to be removed
+%                      from the text in the shorten version. It can be used
+%                      inside of itemize or contain itemize environments and
+%                      only control visibility of the elements.
+% - \added :: is used to signal that text has been changed since last version.
+%             Controls the color of the text if changes are marked.
+
 \documentclass[a4paper]{article}
+
 \usepackage[ascii]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
@@ -97,7 +114,11 @@ Laws of the Game
 %\caption{Team NimbRo, winner of the Best Humanoid Award 2019}
 \end{figure}
 
-{\large Changes to the original rule book are either \added{marked in magenta text colour} (for additions) or by  \removed{crossed out text} (for deletions).}
+\removedSection{
+  \large Changes to the original rule book are either \added{marked in magenta
+    text colour} (for additions) or by  \removed{crossed out text} (for
+  deletions).
+}
 
 \bigskip
 RoboCup Humanoid League Mailing List (for important announcements):\\
@@ -192,10 +213,10 @@ Deviations from the FIFA rules are marked in the text:
 \input{Section_I/law8}
 \input{Section_I/law9}
 \input{Section_I/law10}
-\simplify{\input{Section_I/law11}}
+\input{Section_I/law11}
 \input{Section_I/law12}
 \input{Section_I/law13}
-\simplify{\input{Section_I/law14}}
+\input{Section_I/law14}
 \input{Section_I/law15}
 \input{Section_I/law16}
 \input{Section_I/law17}

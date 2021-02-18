@@ -26,6 +26,7 @@ A re-inspection might be requested by any team leader \added{and is guaranteed t
 
 \bigskip
 
+\removedSection{
 {\bfseries \removed{Referee Duty}}
 
 \headlinebox
@@ -35,6 +36,7 @@ might be assigned for referee duties and for the technical inspection by the
 league organizing committee.}
 
 \bigskip
+}
 
 {\bfseries Competitions}
 
@@ -45,10 +47,13 @@ The competitions consist of:
 \begin{enumerate}
 \item Regular tournament for KidSize (4 vs. 4),
 \item Regular tournament for AdultSize (2 vs. 2),
+\removedSection{
 \item \removed{Drop-In games for KidSize and AdultSize}
 \item \removed{Technical challenges}.
+}
 \end{enumerate}
 
+\removedSection{
 \bigskip
 
 % Combined Teams
@@ -92,6 +97,7 @@ The competitions consist of:
       form a full team,
       the score of their full team will be $4.5$.}
   .}
+}
 
   \bigskip
   
@@ -133,6 +139,7 @@ receives zero points.
 
 \bigskip
 
+\removedSection{
 \removed{For the AdultSize soccer games, a specific rule for robot handlers applies. For every robot, one robot handler is allowed to stay near the robot such that the robot handler does not interfere with the game. Specifically, the robot handler:}
 \begin{itemize}
 \item \removed{should position himself behind the robot at a distance of at least an arm length away from the robot's convex hull.}
@@ -146,6 +153,7 @@ receives zero points.
 \color{black}
 
 \bigskip
+}
 
 After games of a round robin have been played, the teams of a group are ranked based on (in decreasing priority): 
 
@@ -190,7 +198,8 @@ A team that forfeits is disqualified from the competition. Forfeiting is defined
 \item If a team chooses to forfeit the final before the game for 3rd and 4th place, it will be replaced by the team that lost to the forfeiting team in the previous semi-finals. The team that lost to the forfeiting team in the previous semi-finals (i.e. the one initially being qualified for the game for 3rd and 4th place) will be replaced for the game for 3rd and 4th place by the team that lost to it in the respective quarter final.
 \end{itemize}
 
-\clearpage
+\bigskip
+
 {\bfseries Gameplay}
 
 \headlinebox
@@ -265,7 +274,9 @@ for re-positioning after a goal has been scored by one of the teams before the
       They are guaranteed at least 15 seconds to move away from the ball.
       They may take up to 30 seconds if the team taking the free kick has not
       announced their robot is ready to take the kick off.
+\removedSection{
 \item \removed{The assistant referee announces that 15 seconds and, if applicable, 30 seconds are over.}
+}
 \item The referee may decide to execute the free kick any time between 15 and 30 seconds
       have passed depending on the call of the team taking the free kick and the position of
       the opponent robots.
@@ -288,8 +299,7 @@ for re-positioning after a goal has been scored by one of the teams before the
 The distance between the ball and the player of the opponent team is measured between the point on the convex hull of the robot and the point on the outside of the ball which are most close together.
 
 \color{black}
-
-
+\removedSection{
 \removed{The referee blows the whistle, announces 'Free-Kick' blue or red and then places
 the ball depending on the call.
 The assistant referee who operates the game controller clicks on
@@ -314,9 +324,7 @@ opponent is illegally positioned.}
 \removed{Once the free kick can be executed, the referee blows the whistle and the
 assistant referee clicks on ``Execute Direct / Indirect Free Kick'' Blue/Red.}
 
-
 \bigskip
-
 
 {\bfseries \removed{Request for Pick-up}}
 
@@ -332,6 +340,7 @@ different person from the team immediately.
 In case of repeated violations throughout the tournament, the Technical
 Committee can decide to permanently disallow a certain person from serving as
 a robot handler for the rest of the tournament.}
+}
 
 \bigskip
 
@@ -356,6 +365,7 @@ inactive player and receives a 30 second removal penalty.
 
 \bigskip
 
+\removedSection{
 {\bfseries \removed{Substitutions}}
 
 \removed{Up to two players per game can be substituted by other players of the same team.
@@ -391,13 +401,15 @@ The same rules as for \textit{Removal Penalty} apply.}
 significant changes to robot positions or heading directions. Untangled robots must be laid on the ground not closer than 50cm to the ball and in a way not gaining an advantage.}
 
 \bigskip
-
+}
 
 {\bfseries Removal Penalty}
 
 \begin{itemize}
 \item Time penalties of 30 seconds for players are called by the referee. \removed{When a penalty is called, the designated robot handler has to remove the robot as soon as possible and by that interacting as little as possible with the game} 
+\removedSection{
 \item \removed{The referee and assistant referees are in charge of timing the penalties and notifying the teams to put back their robots to play.}
+}
 \item A field player or goal keeper suffering a time penalty will be \added{automatically} removed from the field and is only allowed to re-enter the field from the team's own half of the field close to the penalty mark \removed{facing the opposite touch line,} as indicated by the referee. \added{The referee chooses the touch line further away from the ball if there is still an empty spot available. The first spot for a penalized robot on the touch line is on the same height of the penalty mark. Every consecutive spot is 60 cm (KidSize) or 100 cm (AdultSize) away from the previous position, either towards the team's own goal line or towards the center line. A valid position must be at least 30 cm (KidSize) or 50 cm (AdultSize) away from the goal line and center line. A position is considered as being taken if a robot from any team is within a radius of 30 cm (KidSize) or (50 cm) AdultSize) of the penalty position. The referee always positions the robot on the penalty spot closest to the penalty mark. If two positions are available that are equally close, the referee chooses the position that is further away from the ball.}
 \item After the robot has been placed at the position indicated by the referee
       and with both feet entirely outside the field of play \removed{the robot handler
@@ -409,18 +421,21 @@ significant changes to robot positions or heading directions. Untangled robots m
       or the robot handler touching the robot before the 30 seconds expired,
       the time is reset.}
 \item The \removed{assistant referee operating the} GameController will:
-\begin{itemize}
-\item Penalize the robot as soon as the referee calls the penalty.
-\item Marks the penalty time counting down as soon as the robot \removed{handler
+  \begin{itemize}
+  \item Penalize the robot as soon as the referee calls the penalty.
+  \item Marks the penalty time counting down as soon as the robot \removed{handler
       announced the robot being ready to walk in} \added{is placed on the penalty position outside the field}
-\item \removed{Resets the penalty time whenever the robot handler touches the robot or
+  \removedSection{
+  \item \removed{Resets the penalty time whenever the robot handler touches the robot or
       the robot touches the field of play}
-\end{itemize}
+  }
+  \end{itemize}
 \item The penalty is automatically removed after 30 seconds of penalty have expired.
 \end{itemize}
 
 \bigskip
 
+\removedSection{
 {\bfseries \removed{Timeouts}}
 
 \removed{A team may call for a timeout before kick-off after a goal was scored,
@@ -450,6 +465,7 @@ However, when and whether to call a referee timeout is left up to the head refer
 \removed{The team who would have kicked off if the timeout had not been called shall kickoff when the game resumes.}
 
 \bigskip
+}
 
 {\bfseries \added{Timeout and Restart by Technical Committee}}
 
@@ -476,6 +492,7 @@ Yellow and red cards given to robots only accumulate for the current game and ar
 
 \bigskip
 
+\removedSection{
 {\bfseries \removed{Drop-In Games}}
 
 \headlinebox
@@ -620,6 +637,7 @@ ranking of the three eligible candidates.
 If there are still ties, the president of the RoboCup Federation breaks the tie.}
 
 \bigskip
+}
 
 {\bfseries Trophies}
 
@@ -648,16 +666,27 @@ points is greater than 0.}
 
 \bigskip
 
+\removedSection{
 \removed{The Best Humanoid Award is awarded to the team ranked first in the Best Humanoid list,
 it can either be a trophy or a certificate.}
 
 \bigskip
+}
 
 {\bfseries Conflict Resolution}
 
 \headlinebox
 
-It is the responsibility of the team leader to inspect the other team's robot\added{s} \removed{an hour in advance of a game} \added{before the start of the tournament}. Any concern regarding the rule compliance of any of the robots, including the amount, size and colour of the team markers, must be brought to the attention of the \removed{referee an hour in advance of the game} \added{Technical Committee a week before the start of the tournament}. \removed{If the referee is unavailable, they have to be brought to the attention of the Technical Committee instead.}
+It is the responsibility of the team leader to inspect the other team's
+robot\added{s} \removed{an hour in advance of a game }\added{before the start of
+  the tournament}. Any concern regarding the rule compliance of any of the
+robots, including the amount, size and colour of the team markers, must be
+brought to the attention of the \removed{referee an hour in advance of the game}
+\added{Technical Committee a week before the start of the tournament}.
+\removed{If the referee is unavailable, they have to be brought to the attention
+  of the Technical Committee instead.}
+
+
 
 \bigskip
 
