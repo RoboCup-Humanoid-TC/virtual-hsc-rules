@@ -15,20 +15,54 @@ offences and infringements committed when the ball is in play.
 
 \headlinebox
 
-A direct free kick is awarded to the opposing team if a player commits any of the following offences to a player of the opposing team:
+A direct free kick is awarded to the opposing team if a player commits
+\added{a foul according to the decision diagram presented in
+  Fig.~\ref{fig:forceful_contact}, with the values listed in
+  Table~\ref{tab:forceful_contact}.
+}
+\removed{any of the following offences to a player of the opposing team:}
+\removedSection{
 \begin{itemize}
-\item \added{touches another player with a body part which is moving faster than the part of the opposing robot that is touched, if the robot of the opposing team falls to the ground within 5 seconds after the touch occurred.} \removed{uses forceful contact that significantly destabilizes a player, such that walking and/or kicking is impeded. Examples for forceful contacts include falling into another player or walking carelessly into another player at significant speed.}
-\item \added{touches another player with a body part which is moving faster than the part of the opposing robot that is touched for at least 80\% of the time during a time interval of 5 seconds.} \removed{walks into another player for 4 to 5 seconds (even a fallen or getting up player), even if the 'force to push' is minimal.}
+\item \removed{uses forceful contact that significantly destabilizes a player, such
+    that walking and/or kicking is impeded. Examples for forceful contacts
+    include falling into another player or walking carelessly into another
+    player at significant speed.}
+\item \removed{walks into another player for 4 to 5 seconds (even a fallen or
+    getting up player), even if the 'force to push' is minimal.}
 \end{itemize}
+}
+
+\begin{table}[h]
+  \caption{\label{tab:forceful_contact}Decision values for the foul detection}
+  \centering
+  \begin{tabular}{|l l r l|}
+    \hline
+    Name & Notation & value & unit\\
+    \hline
+    Pushing time & $T_p$ & 1 & s\\
+    Pushing period & $T_{pt}$ & 2 & s\\
+    Vicinity distance & $D_v$ & 2 & m\\
+    Distance threshold & $D_t$ & 0.1 & m\\
+    Speed threshold & $s_t$ & 0.2 & m/s\\
+    Direction threshold & $\theta_t$ & 30 & deg\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{figure}[h]
+  \centering
+  \input{Section_I/forceful_contact_diagram.tex}
+  \caption{\label{fig:forceful_contact}Decision diagram applied to every pair
+    of robots from opposing teams}
+\end{figure}
+
 
 A free kick is not awarded if one of the following exceptions occurs: 
 \begin{itemize}
 \removedSection{
 \item \removed{The player committing the offence is stationary, including a player that is kicking, provided that the ball was close enough where a kick could have succeeded at the start of the kick motion.}
 \item \removed{The player committing the offence is currently getting up.}
-}
-\item The player committing the offence is the current goal keeper and is currently \removed{looking at or} chasing the ball\added{,i.e., moving towards or moving with the ball}, in it's own penalty area.
-\removedSection{
+\item The player committing the offence is the current goal keeper and is currently \removed{looking at or} chasing the ball, in it's own penalty area.
 \item \removed{Front to front contact between players with the ball between them does not lead to a free kick, unless one player walks at a significantly higher speed or with significantly more force that is impossible to stand for the other player.}
 \item \removed{Any player proceeding to the ball whose side (i. e. arm, shoulder etc.) who only  makes contact with another player is not committing an offence, even if the second player is not proceeding to the ball.}
 }
@@ -52,7 +86,8 @@ A free kick is not awarded if one of the following exceptions occurs:
 \bigskip
 
 
-A direct free kick is also awarded to the opposing team if a player commits any of the following \removed{four} \greyed{(replaces: three}) offences: 
+A direct free kick is also awarded to the opposing team if a player commits any
+of the following \removed{four }\greyed{(replaces: three) }offences: 
 
 \begin{itemize}
 \removedSection{
@@ -96,7 +131,7 @@ A direct free kick is taken from the place where the offence occurred (see Law 1
 \headlinebox
 
 A penalty kick \simplify{(new) }as defined by Law 14 is awarded if any of the above \removed{six}
-\greyed{(replaces: ten}) offences is committed by a player inside his own penalty area,
+\greyed{(replaces: ten) }offences is committed by a player inside his own penalty area,
 irrespective of the position of the ball, provided it is in play.
 
 
