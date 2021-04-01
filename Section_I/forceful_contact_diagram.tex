@@ -1,11 +1,10 @@
-
 \newcommand{\ownGoalArea}[1]{\textsc{ownGoalArea}(#1)}
-\newcommand{\moveToBall}[1]{\textsc{moveToBall}(#1)}
+\newcommand{\movesToBall}[1]{\textsc{movesToBall}(#1)}
 
 \begin{tikzpicture}
   [
   block/.style = {draw, text width = 35mm, minimum height=15mm, align=center,
-    node distance = 5mm and -2mm, scale=0.8},
+    node distance = 3mm and -2mm, scale=0.8},
   decision/.style = {block, rectangle},
   result/.style = {block,ellipse, text width=15mm},
   line/.style = {->, draw, thick,to path={-| (\tikztotarget) \tikztonodes},
@@ -39,12 +38,12 @@
   \node[result, below right=of lowSpeed] (no4) {No foul};
 
   \node[decision, below left=of ballProximity,xshift=-4cm] (charging)
-  {$\moveToBall{R_2}$\\$\neg\moveToBall{R_1}$\\$|\vec{v}(R_1)| > s_t$};
+  {$\movesToBall{R_2}$\\$\neg\movesToBall{R_1}$\\$|\vec{v}(R_1)| > s_t$};
   \node[decision, below right=of ballProximity] (speedDiff) {$|\vec{v}(R_1)| - |\vec{v}(R_2)| > s_t$};
 
   \node[result, below left=of charging] (chargingFoul) {Foul};
   \node[decision, below right=of charging] (behindCharge)
-  {$\moveToBall{R_1}$\\$\moveToBall{R_2}$\\$\overline{R_1B} - \overline{R_2B} > D_t$};
+  {$\movesToBall{R_1}$\\$\movesToBall{R_2}$\\$\overline{R_1B} - \overline{R_2B} > D_t$};
   
   \node[result, below left=of behindCharge] (behindChargeFoul) {Foul};
   \node[result, below right=of behindCharge] (no6) {No foul};
@@ -85,7 +84,7 @@
     \item $\ownGoalArea{R}$ denotes if $R$ is in its own goal area\\
     \item $\vec{v}(R)$ denotes the speed of the CoM of $R$
       (filtered over several simulation steps)\\
-    \item $\moveToBall{R}$ denotes the fact that the angle between $\vec{v}(R)$ and
+    \item $\movesToBall{R}$ denotes the fact that the angle between $\vec{v}(R)$ and
      $\vec{RB}$ is below $\theta_t$.
     \item When a decision node contain multiple lines, all should be satisfied
     \end{itemize}

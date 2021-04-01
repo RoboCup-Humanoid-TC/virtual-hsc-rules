@@ -18,13 +18,19 @@ the start of play and must comply with competition rules.
 \greyed{(replaces: The match lasts two equal periods of 45 minutes, unless otherwise mutually agreed between the referee and the two teams. Any agreement to alter the duration of the periods of play (e.g. to reduce each half to 40 minutes because of
 insufficient light) must be made before the start of play and must comply with competition rules.)}
 
-\added{Teams are given a 2 minutes time period between the match start and
-  the time at which robots spawn.
-  At the beginning of half-times and penalty-shootouts,
-  15 seconds are counted since robots are spawn in the simulator
-  before transition to an active game state.
-  At the end of the game, teams are given 2 minutes time period to finish
-  writing logs and properly shutdown their program.
+\added{%
+  Teams are given a 2 minute time period between the robot models being spawned
+  and the start of the match.
+  The start of the match is defined as the game state changing to READY for the
+  first half time.
+  At the beginning of the second half time, each half time in the extended
+  period and the beginning of the penalty shootout,
+  the referee will wait at least 15 seconds between spawning the robot models
+  and transitioning to an active game state.
+  Once the end of the match was declared by the referee and communicated by the
+  GameController,
+  teams receive a 2 minute time period to finish writing logs and properly shut
+  down their program before the process will be terminated.
 }
 
 \bigskip
