@@ -29,7 +29,7 @@
   \node[decision, below left=of pushing] (backpushing)
   {$\overline{R_1B} < D_v$\\$\overline{R_1B}   - \overline{R_2B} > D_t$};
   \node[decision, below right=of pushing,xshift=2cm] (lowSpeed)
-  {$|\vec{v}(R1)| < s_t$\\$ |\vec{v}(R2)| < s_t$};
+  {$|\vec{v}(R1)| > s_t$};
 
   \node[result, below left=of backpushing] (foul2) {Foul};
   \node[result, below right=of backpushing] (no3) {No foul};
@@ -38,7 +38,7 @@
   \node[result, below right=of lowSpeed] (no4) {No foul};
 
   \node[decision, below left=of ballProximity,xshift=-4cm] (charging)
-  {$\movesToBall{R_2}$\\$\neg\movesToBall{R_1}$\\$|\vec{v}(R_1)| > s_t$};
+  {$\movesToBall{R_2}$\\$\neg\movesToBall{R_1}$};
   \node[decision, below right=of ballProximity] (speedDiff) {$|\vec{v}(R_1)| - |\vec{v}(R_2)| > s_t$};
 
   \node[result, below left=of charging] (chargingFoul) {Foul};
@@ -84,7 +84,8 @@
     \item $\ownGoalArea{R}$ denotes if $R$ is in its own goal area\\
     \item $\vec{v}(R)$ denotes the speed of the CoM of $R$
       (filtered over several simulation steps)\\
-    \item $\movesToBall{R}$ denotes the fact that the angle between $\vec{v}(R)$ and
+    \item $\movesToBall{R}$ denotes the fact that
+      $\vec{v}(R) < s_t$ or the angle between $\vec{v}(R)$ and
      $\vec{RB}$ is below $\theta_t$.
     \item When a decision node contain multiple lines, all should be satisfied
     \end{itemize}

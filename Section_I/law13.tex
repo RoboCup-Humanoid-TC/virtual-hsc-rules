@@ -63,7 +63,10 @@ opposing team
 
 All free kicks are taken from the place where the offence occurred, except:
 \begin{itemize}
-\item indirect free kicks to the attacking team for an offence inside the opponents' goal area are taken from the nearest point on the goal area line which runs parallel to the goal line
+\item indirect free kicks to the attacking team for an offence inside the
+  opponents' \removed{goal}\added{penalty} area are taken from the nearest point
+  on the \removed{goal}\added{penalty} area line which runs parallel to the goal
+  line.
 \removedSection{
 \item \removed{free kicks to the defending team in their goal area may be taken from anywhere in that area}
 }
@@ -104,8 +107,9 @@ The referee places the ball depending on the call and announces
 ``Prepare Direct / Indirect Free Kick'' Blue/Red \added{to the GameController}.
 The player taking the free kick has up to 30 seconds to position themselves for
 the free kick.
-\added{Any player from} the team taking the free kick may announce that the player is ready to take the
-free kick at any point.
+\added{Any player from} the team taking the free kick may announce that the
+player is ready to take the free kick at any point \added{by sending a
+message to the GameController}.
 
 Players are guaranteed at least 15 seconds to move away from the ball.
 They may take up to 30 seconds if the team taking the free kick has not
@@ -130,14 +134,19 @@ If, when a free kick is taken, an opponent is closer to the ball than the requir
 \item the opponent receives a 30 second removal penalty \greyed{(replaces: the kick is retaken)}
 \end{itemize}
 
-If, when a free kick is taken by the defending team from inside its own penalty area, the ball is not kicked directly out of the penalty area:
+\removedSection{
+  \removed{
+    If, when a free kick is taken by the defending team from inside its own
+    penalty area, the ball is not kicked directly out of the penalty area:
+  }
 
-
-\begin{itemize}
-\item the kick is retaken \simplify{(new:) }\added{once} if the goal keeper managed to reach the ball within the time frame. Otherwise, the ball is in play again.
-\end{itemize}
-
-\bigskip
+  \begin{itemize}
+  \item \removed{the kick is retaken \simplify{(new:) }if the goal keeper
+      managed to reach the ball within the time frame. Otherwise, the ball is in
+      play again.}
+  \end{itemize}
+  \bigskip
+}
 
 \greyed{(suspended:)
 \textbf{Free kick taken by a player other than the goalkeeper}

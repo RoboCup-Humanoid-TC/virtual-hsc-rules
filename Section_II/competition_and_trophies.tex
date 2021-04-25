@@ -301,7 +301,10 @@ for re-positioning after a goal has been scored by one of the teams before the
       kicked and \removed{clearly moves as determined by the referee} \added{moves at least 5 cm} or after 10 seconds.
 \end{enumerate}
 
-The distance between the ball and the player of the opponent team is measured between the point on the convex hull of the robot and the point on the outside of the ball which are most close together.
+The distance between the ball and the player of the opponent team is measured
+between the \added{projection on the ground of the center of mass of both
+  objects.}\removed{point on the convex hull of the robot and the point on the
+  outside of the ball which are most close together.}
 
 \color{black}
 \removedSection{
@@ -328,9 +331,32 @@ opponent is illegally positioned.}
 
 \removed{Once the free kick can be executed, the referee blows the whistle and the
 assistant referee clicks on ``Execute Direct / Indirect Free Kick'' Blue/Red.}
+}
 
 \bigskip
 
+\added{
+{\bfseries Penalty shoot-outs procedure}
+
+The referee decides randomly towards which goal the penalty shoot-outs will be
+performed.
+Then, each penalty trial is performed with the following procedure.
+ 
+\begin{enumerate}
+\item The kicker is defined as the robot from the kicker's team without red card
+  with the lowest number.
+\item The goalkeeper is chosen based on the GameController information.
+\item Both players are spawned at appropriate locations.
+\item State is set to SET
+\item Ball is spawned on the penalty mark.
+\item The referee waits 15 seconds before sending signals to start the trial
+\item The state is set to PLAYING.
+\end{enumerate}
+
+\bigskip
+}
+
+\removedSection{
 {\bfseries \removed{Request for Pick-up}}
 
 \removed{A robot handler may request to pick-up a robot if and only if a robot is in a
@@ -345,9 +371,9 @@ different person from the team immediately.
 In case of repeated violations throughout the tournament, the Technical
 Committee can decide to permanently disallow a certain person from serving as
 a robot handler for the rest of the tournament.}
-}
 
 \bigskip
+}
 
 {\bfseries Incapable Players}
 
@@ -688,7 +714,12 @@ If there are still ties, the president of the RoboCup Federation breaks the tie.
 
 \headlinebox
 
-A trophy is awarded to the winner of the soccer tournament in each of the individual size classes \removed{and technical challenges}. In case of less than 3 teams participating in a size class no trophies will be given in this class.
+A trophy is awarded to the winner of the soccer tournament in each of the
+individual size classes \removed{and technical challenges}.
+\added{In case there are two divisions, trophies are only awarded to the teams
+of division A. Teams of Division B might be awarded certificates.}
+In case of less than 3 teams participating in a size class no trophies will be
+given in this class.
 
 \bigskip
 

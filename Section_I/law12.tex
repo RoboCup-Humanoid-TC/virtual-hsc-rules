@@ -111,13 +111,16 @@ offence\removed{s}:
     \added{defined as less than 0.75m in KidSize and 1.5m in AdultSize.}
   }, the convex hull is taken around all
   the player of a team, which prevent removal of the ball.
+  \added{Ball holding offences always occurs at the location of the ball.}
 \end{itemize}
 
 \bigskip
 
 \simplify{(new:) }If an offense did not happen within a radius of approx. 1 m
-around the current ball position, the direct free kick is replaced by a removal
-penalty.
+around the current ball position\added{, or if the ball is not in play},
+the direct free kick is replaced by a removal penalty.
+\added{Ball holding leads to a free kick independently of the distance between
+  the robots and the ball.}
 
 \bigskip
 
@@ -174,12 +177,15 @@ An indirect free kick is awarded to the opposing team if a goalkeeper, inside hi
 \bigskip
 }
 
-\simplify{(new:) }If an offense did not happen within a radius of approx. 1 m
-around the current ball position, the indirect free kick is replaced by a
-removal penalty.
+\removedSection{%
+  \removed{
+    \simplify{(new:) }If an offense did not happen within a radius of approx. 1 m
+    around the current ball position, the indirect free kick is replaced by a
+    removal penalty.
+  }
 
-
-\bigskip
+  \bigskip
+}
 
 The indirect free kick is taken from the place where the offence occurred (see Law 13 -- Position of free kick). \removed{(new:) If moving the ball to the place where the offence occurred would be to the disadvantage of the team to which the free kick is awarded, the referee allows play to continue.}
 
