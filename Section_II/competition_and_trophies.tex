@@ -258,45 +258,95 @@ for re-positioning after a goal has been scored by one of the teams before the
 \bigskip
 
 
-{\bfseries Free-kick procedure}
+{\bfseries \removed{Free-kick}\added{Game interruption} procedure}
+
+\added{
+This procedure applies for throw-ins, corners, goal kicks, direct free-kicks,
+indirect free-kicks and penalties called during a game.
+It ensures a minimal distance of $D$ between objects that were moved during
+this phase.
+For KidSize, $D$ is 50 centimeters and for AdultSize, $D$ is 1 meter.
+}
 
 \begin{enumerate}
-\item The referee \removed{blows the whistle,} announces the offence and the free kick
+\item The referee \removed{blows the whistle,} announces the offence and the
+      \added{game interruption}\removed{free kick}
       (e.g 'Pushing Red - Direct Free-Kick Blue')
-\item \removed{The assistant referee who operates the game controller clicks on} \added{The referee communicates} "Direct / Indirect Free Kick" Blue/Red \added{to the GameController}.
-\item The referee places the ball depending on the call and announces "Free Kick Ready".
+\item \removed{The assistant referee who operates the game controller clicks on
+    "Direct / Indirect Free Kick" Blue/Red.}
+  \added{The referee communicates the game interruption and to which team it is
+    awarded to the game controller.}
+\item \removed{The referee places the ball depending on the call and announces "Free Kick Ready".
       Until the referee announced the free kick to be ready robots may move
       their head to track the ball but must otherwise remain stationary.
-      Robots which are significantly moving during this phase are removed from the field.
-\item The \removed{assistant referee who operates the game controller clicks on} \added{referee communicates}
-      "Prepare Direct / Indirect Free Kick" Blue/Red \added{to the GameController}.
-      The player taking the free kick has up to 30 seconds to position
-      themselves for the free kick.
-      \added{Any player of} the team taking the free kick may announce that the player is ready to
-      take the free kick at any point.
+      Robots which are significantly moving during this phase are removed from the field.}
+      \added{%
+        The robots are allowed 10 seconds to stand-up and stop any infringement
+        to the rules.
+        At the end of this 10 seconds, the referee places the ball according to
+        the game interruption.
+        In case a robot is located at a distance lower than $D$, the following
+        actions are performed in order:
+        \begin{enumerate}
+        \item Apply a removal penalty to all fallen and already penalized robots
+          that are located at a distance lower than $D$ of the ball.
+        \item If previous step was not sufficient to ensure distance $D$, the
+          referee tries to find a nearby location for the ball that is at a
+          distance of at least $D$ from all objects.
+          This location should respects the rule for the game interruption.
+          In particular, there are no alternative location for penalties, goal
+          kicks and corner kicks.
+        \item If both previous steps were not successful, the remaining robots
+          at a distance of less than $D$ from the ball location are moved away
+          from the ball, ensuring that they are at least at a distance of $D$
+          from all objects, including the ball.
+        \end{enumerate}
+      }
+\item \removed{The assistant referee who operates the game controller clicks on
+        "Prepare Direct / Indirect Free Kick" Blue/Red.}
+      \added{%
+        The referee communicates that the Game Interruption is ready to the
+        GameController.%
+      }%
+      The player taking the \added{game interruption}\removed{free kick} has up
+      to 30 seconds to position themselves for the
+      \added{game interruption}\removed{free kick}.
+      \added{Any player of} the team taking the
+      \added{game interruption}\removed{free kick} may announce that the player
+      is ready to take the \added{game interruption}\removed{free kick} at any
+      point.
       Opponent robots must move to a position at least 0.75 m for KidSize and
       1.5m for AdultSize away from the ball.
       They are guaranteed at least 15 seconds to move away from the ball.
-      They may take up to 30 seconds if the team taking the free kick has not
+      They may take up to 30 seconds if the team taking the
+      \added{game interruption}\removed{free kick} has not
       announced their robot is ready to take the kick off.
 \removedSection{
 \item \removed{The assistant referee announces that 15 seconds and, if applicable, 30 seconds are over.}
 }
-\item The referee may decide to execute the free kick any time between 15 and 30 seconds
-      have passed depending on the call of the team taking the free kick and the position of
+\item The referee \added{announces that the game interruption is prepared}%
+      \removed{may decide to execute the free kick any time} between 15 and 30
+      seconds have passed depending on the call of the team taking
+      the \added{game interruption}\removed{free kick} and the position of
       the opponent robots.
-      The referee may also allow the free kick to be executed before 15 seconds have passed
-      if the team taking the free kick have announced their robot is ready and if no opponent is
-      illegally positioned.
+      The referee may also \added{announce that the game interruption is
+        prepared}%
+      \removed{allow the free kick to be executed} before 15 seconds have passed
+      if the team taking the \added{game interruption}\removed{free kick} has
+      announced their robot is ready and if no opponent is illegally positioned.
 \item Any opponent robot still illegally positioned is considered as an
       incapable player and must be removed from the field for 30 seconds
       removal penalty.
-\item When the referee decides to execute the free kick and all opponent robots are
+\item When the referee decides to execute the \added{game interruption}%
+      \removed{free kick} and all opponent robots are
       legally positioned or have been removed from the field,
-      the referee \removed{blows the whistle.
-      Then the assistant referee who operates the game controller clicks on} \added{sends}
-      "Execute Direct / Indirect Free Kick" Blue/Red \added{to the GameController}.
-      The team that was awarded the free-kick can kick now.
+      \added{the referee announces that the game interruption can be executed to
+        the GameController}.%
+      \removed{the referee blows the whistle.
+        Then the assistant referee who operates the game controller clicks on
+        "Execute Direct / Indirect Free Kick" Blue/Red}%
+      The team that was awarded the \added{game interruption}\removed{free-kick}
+      can kick now.
 \item The ball is in play after it has been
       kicked and \removed{clearly moves as determined by the referee} \added{moves at least 5 cm} or after 10 seconds.
 \end{enumerate}
