@@ -288,15 +288,18 @@ For KidSize, $D$ is 50 centimeters and for AdultSize, $D$ is 1 meter.
         In case a robot is located at a distance lower than $D$, the following
         actions are performed in order:
         \begin{enumerate}
-        \item Apply a removal penalty to all fallen and already penalized robots
-          that are located at a distance lower than $D$ of the ball.
-        \item If previous step was not sufficient to ensure distance $D$, the
+        \item Move all penalized robots at a distance lower than $D$ of the ball
+          away, placing them according to the removal penalty rule so that they
+          can finish serving their penalty somewhere else.
+        \item Apply a removal penalty on all fallen robots at a distance lower
+          than $D$ from the ball.
+        \item If previous steps were not sufficient to ensure distance $D$, the
           referee tries to find a nearby location for the ball that is at a
           distance of at least $D$ from all objects.
           This location should respects the rule for the game interruption.
           In particular, there are no alternative location for penalties, goal
           kicks and corner kicks.
-        \item If both previous steps were not successful, the remaining robots
+        \item If previous steps were not sufficient, the remaining robots
           at a distance of less than $D$ from the ball location are moved away
           from the ball, ensuring that they are at least at a distance of $D$
           from all objects, including the ball.
