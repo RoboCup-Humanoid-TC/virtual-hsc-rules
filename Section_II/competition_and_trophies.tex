@@ -396,7 +396,7 @@ performed.
 Then, each penalty trial is performed with the following procedure.
  
 \begin{enumerate}
-\item The kicker is defined as the robot from the kicker's team without red card
+\item The striker is defined as the robot from the striker's team without red card
   with the lowest number.
 \item The goalkeeper is chosen based on the GameController information.
 \item Both players are spawned at appropriate locations.
@@ -405,6 +405,15 @@ Then, each penalty trial is performed with the following procedure.
 \item The referee waits 15 seconds before sending signals to start the trial
 \item The state is set to PLAYING.
 \end{enumerate}
+
+The following additional rules apply to penalty shoot-outs:
+
+\begin{itemize}
+\item The ball holding rule does not apply during penalty shoot-outs.
+\item If the striker commits an offense, the trial ends immediately.
+\item If the goalkeeper commits an offense, it is removed for the whole duration
+  of the trial.
+\end{itemize}
 
 \bigskip
 }
