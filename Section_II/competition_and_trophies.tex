@@ -281,9 +281,9 @@ For KidSize, $D$ is 50 centimeters and for AdultSize, $D$ is 1 meter.
       their head to track the ball but must otherwise remain stationary.
       Robots which are significantly moving during this phase are removed from the field.}
       \added{%
-        The robots are allowed 10 seconds to stand-up and stop any infringement
+        The robots are allowed 5 seconds to stand-up and stop any infringement
         to the rules.
-        At the end of this 10 seconds, the referee places the ball according to
+        At the end of these 5 seconds, the referee places the ball according to
         the game interruption.
         In case a robot is located at a distance lower than $D$, the following
         actions are performed in order:
@@ -312,7 +312,7 @@ For KidSize, $D$ is 50 centimeters and for AdultSize, $D$ is 1 meter.
         GameController.%
       }%
       The player taking the \added{game interruption}\removed{free kick} has up
-      to 30 seconds to position themselves for the
+      to \added{15}\removed{30} seconds to position themselves for the
       \added{game interruption}\removed{free kick}.
       \added{Any player of} the team taking the
       \added{game interruption}\removed{free kick} may announce that the player
@@ -320,18 +320,17 @@ For KidSize, $D$ is 50 centimeters and for AdultSize, $D$ is 1 meter.
       point.
       Opponent robots must move to a position at least 0.75 m for KidSize and
       1.5m for AdultSize away from the ball.
-      They are guaranteed at least 15 seconds to move away from the ball.
-      They may take up to 30 seconds if the team taking the
-      \added{game interruption}\removed{free kick} has not
-      announced their robot is ready to take the kick off.
+      They are guaranteed \removed{at least }15 seconds to move away from the ball.
+      \removed{They may take up to 30 seconds if the team taking the
+      free kick has not
+      announced their robot is ready to take the kick off.}
 \removedSection{
 \item \removed{The assistant referee announces that 15 seconds and, if applicable, 30 seconds are over.}
 }
-\item The referee \added{announces that the game interruption is prepared}%
-      \removed{may decide to execute the free kick any time} between 15 and 30
-      seconds have passed depending on the call of the team taking
-      the \added{game interruption}\removed{free kick} and the position of
-      the opponent robots.
+\item The referee \added{announces that the game interruption is prepared after}%
+      \removed{may decide to execute the free kick any time between} 15 \removed{and 30}
+      seconds have passed\removed{ depending on the call of the team taking
+      the free kick and the position of the opponent robots}.
       The referee may also \added{announce that the game interruption is
         prepared}%
       \removed{allow the free kick to be executed} before 15 seconds have passed
@@ -396,8 +395,8 @@ performed.
 Then, each penalty trial is performed with the following procedure.
  
 \begin{enumerate}
-\item The kicker is defined as the robot from the kicker's team without red card
-  with the lowest number.
+\item The striker is defined as the robot from the striker's team with the
+  lowest ID without a red card.
 \item The goalkeeper is chosen based on the GameController information.
 \item Both players are spawned at appropriate locations.
 \item State is set to SET
@@ -405,6 +404,15 @@ Then, each penalty trial is performed with the following procedure.
 \item The referee waits 15 seconds before sending signals to start the trial
 \item The state is set to PLAYING.
 \end{enumerate}
+
+The following additional rules apply to penalty shoot-outs:
+
+\begin{itemize}
+\item The ball holding rule does not apply during penalty shoot-outs.
+\item If the striker commits an offense, the trial ends immediately.
+\item If the goalkeeper commits an offense, it is removed for the whole duration
+  of the trial.
+\end{itemize}
 
 \bigskip
 }
